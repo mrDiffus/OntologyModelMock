@@ -1,13 +1,14 @@
 using System;
 using Xunit;
+using System.Collections.Generic;
 
 namespace Tests
 {
     public class UnitTest1
     {
         private IMFResolver Resolver { get; set; }
-
-        [Fact("A submodel that has a semantic ID of type 'AspectModel', is mapped to an AspectModel")]
+        //"A submodel that has a semantic ID of type 'AspectModel', is mapped to an AspectModel"
+        [Fact]
         public void AAS_Submodel_SerializedToAspectObject()
         {
             var aasEnvironment = new AAS.Environment();
