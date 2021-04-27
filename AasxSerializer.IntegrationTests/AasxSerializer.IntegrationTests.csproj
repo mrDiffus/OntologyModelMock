@@ -19,4 +19,15 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AasModel\AasModel.csproj" />
+    <ProjectReference Include="..\AasxSerializer\AasxSerializer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="aas-example.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
