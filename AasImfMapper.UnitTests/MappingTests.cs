@@ -8,14 +8,14 @@ using Imf;
 
 namespace Tests
 {
-    public class UnitTest1
+    public class MappingTests
     {
         //"A submodel that has a semantic ID of type 'AspectModel', is mapped to an AspectModel"
         [Fact]
         public void AAS_Submodel_SerializedToAspectObject()
         {
             var aasEnvironment = new AasEnv();
-            var shell = aasEnvironment.AssetAdministrationShells.Elements.First( shell => shell.IdShort == "shellGlobalId");
+            //var shell = aasEnvironment.AssetAdministrationShells.Elements.First( shell => shell.IdShort == "shellGlobalId");
             var submodel = aasEnvironment.Submodels.Elements.First(s => s.Identification.Text == "aspectModelSemanticId");
 
             var aspectModel = AasImfMapper.ToAspectModel(submodel);
