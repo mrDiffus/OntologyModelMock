@@ -11,4 +11,4 @@ A project converting between pure IMF format and IMF compliant AAS format. Takin
 
 * Skal hasParent-relasjon være spesiell på noen måte?
 * Når vi merger 2 eller flere `AspectModel` vil vi slå sammen `AspectObject` med lik `id`. Hva gjør vi hvis de andre feltene som `RdlType` og `Aspect` er forskjellig?
-* Når vi merger 2 eller flere `List<Relationship>` vil vi slå sammen `Relationship` med samme `id`. Hva gjør vi hvis `target` er forskjellig eller hvis vi har relasjon med ulik `id` på 2 forskjellige `AspectObject`? 
+* Når vi merger 2 eller flere `List<Relationship>` vil vi slå sammen `Relationship` med samme `id`. Hva gjør vi hvis `target` er forskjellig eller hvis vi har relasjon med lik `id` på 2 forskjellige `AspectObject`? 
