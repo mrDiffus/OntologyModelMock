@@ -16,7 +16,7 @@ namespace Tests
         {
             var aasEnvironment = new AasEnv();
             //var shell = aasEnvironment.AssetAdministrationShells.Elements.First( shell => shell.IdShort == "shellGlobalId");
-            var submodel = aasEnvironment.Submodels.Elements.First(s => s.Identification.Text == "aspectModelSemanticId");
+            var submodel = aasEnvironment.Submodels.First(s => s.Identification.Text == "aspectModelSemanticId");
 
             var aspectModel = AasImfMapper.ToAspectModel(submodel);
             var aspectObjects = aspectModel.AspectObjects;
@@ -32,8 +32,8 @@ namespace Tests
         public void AAS_Multiple_Submodel_Builds_Tree()
         {
             var aasEnvironment = new AasEnv();
-            var shell = aasEnvironment.AssetAdministrationShells.Elements.First(shell => shell.IdShort == "shellGlobalId");
-            var submodels = aasEnvironment.Submodels.Elements.Where(s => s.Identification.Text == "aspectModelSemanticId").Take(2);
+            var shell = aasEnvironment.AssetAdministrationShells.First(shell => shell.IdShort == "shellGlobalId");
+            var submodels = aasEnvironment.Submodels.Where(s => s.Identification.Text == "aspectModelSemanticId").Take(2);
 
             var aspectModels = new List<AspectModel>();
             foreach(var submodel in submodels)

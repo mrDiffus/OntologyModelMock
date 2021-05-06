@@ -11,7 +11,7 @@ namespace AasxSerializer.IntegrationTests
         public async Task DeserializationOKAsync()
         {
             var aasEnv = await AasxSerializer.DeserializeFromFileAsync("aas-example.xml");
-            var shortId = aasEnv.AssetAdministrationShells.Elements.First().IdShort;
+            var shortId = aasEnv.AssetAdministrationShells.First().IdShort;
             Console.WriteLine(shortId);
         }
     }

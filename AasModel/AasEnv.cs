@@ -6,22 +6,33 @@ namespace AasModel
 	[XmlRoot(ElementName = "aasenv", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class AasEnv
 	{
-		[XmlElement(ElementName = "assetAdministrationShells", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public AssetAdministrationShells AssetAdministrationShells { get; set; }
-		[XmlElement(ElementName = "assets", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Assets Assets { get; set; }
-		[XmlElement(ElementName = "submodels", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Submodels Submodels { get; set; }
+		[XmlArray("assetAdministrationShells", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("assetAdministrationShell", typeof(AssetAdministrationShell), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<AssetAdministrationShell> AssetAdministrationShells { get; set; }
+
+		[XmlArray("assets", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("asset", typeof(Asset), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Asset> Assets { get; set; }
+
+		[XmlArray("submodels", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("submodel", typeof(Submodel), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Submodel> Submodels { get; set; }
+
 		[XmlElement(ElementName = "conceptDescriptions", Namespace = "http://www.admin-shell.io/aas/2/0")]
 		public string ConceptDescriptions { get; set; }
+
 		[XmlAttribute(AttributeName = "IEC", Namespace = "http://www.w3.org/2000/xmlns/")]
 		public string IEC { get; set; }
+
 		[XmlAttribute(AttributeName = "xsi", Namespace = "http://www.w3.org/2000/xmlns/")]
 		public string Xsi { get; set; }
+
 		[XmlAttribute(AttributeName = "abac", Namespace = "http://www.w3.org/2000/xmlns/")]
 		public string Abac { get; set; }
+
 		[XmlAttribute(AttributeName = "schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
 		public string SchemaLocation { get; set; }
+
 		[XmlAttribute(AttributeName = "aas", Namespace = "http://www.w3.org/2000/xmlns/")]
 		public string Aas { get; set; }
 	}
@@ -48,33 +59,23 @@ namespace AasModel
 		public string Text { get; set; }
 	}
 
-	[XmlRoot(ElementName = "keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class Keys
-	{
-		[XmlElement(ElementName = "key", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public List<Key> Elements { get; set; }
-	}
 
 	[XmlRoot(ElementName = "assetRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class AssetRef
 	{
-		[XmlElement(ElementName = "keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Keys Keys { get; set; }
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
 	}
 
 	[XmlRoot(ElementName = "submodelRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class SubmodelRef
 	{
-		[XmlElement(ElementName = "keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Keys Keys { get; set; }
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
 	}
 
-	[XmlRoot(ElementName = "submodelRefs", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class SubmodelRefs
-	{
-		[XmlElement(ElementName = "submodelRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public List<SubmodelRef> SubmodelRef { get; set; }
-	}
 
 	[XmlRoot(ElementName = "assetAdministrationShell", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class AssetAdministrationShell
@@ -85,16 +86,16 @@ namespace AasModel
 		public Identification Identification { get; set; }
 		[XmlElement(ElementName = "assetRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
 		public AssetRef AssetRef { get; set; }
-		[XmlElement(ElementName = "submodelRefs", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public SubmodelRefs SubmodelRefs { get; set; }
+
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
+
+		[XmlArray("submodelRefs", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("submodelRef", typeof(SubmodelRef), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<SubmodelRef> SubmodelRefs { get; set; }
 	}
 
-	[XmlRoot(ElementName = "assetAdministrationShells", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class AssetAdministrationShells
-	{
-		[XmlElement(ElementName = "assetAdministrationShell", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public List<AssetAdministrationShell> Elements { get; set; }
-	}
 
 	[XmlRoot(ElementName = "administration", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class Administration
@@ -108,8 +109,9 @@ namespace AasModel
 	[XmlRoot(ElementName = "assetIdentificationModelRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class AssetIdentificationModelRef
 	{
-		[XmlElement(ElementName = "keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Keys Keys { get; set; }
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
 	}
 
 	[XmlRoot(ElementName = "asset", Namespace = "http://www.admin-shell.io/aas/2/0")]
@@ -127,18 +129,12 @@ namespace AasModel
 		public string Kind { get; set; }
 	}
 
-	[XmlRoot(ElementName = "assets", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class Assets
-	{
-		[XmlElement(ElementName = "asset", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public List<Asset> Elements { get; set; }
-	}
-
 	[XmlRoot(ElementName = "semanticId", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class SemanticId
 	{
-		[XmlElement(ElementName = "keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Keys Keys { get; set; }
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
 	}
 
 	[XmlRoot(ElementName = "submodel", Namespace = "http://www.admin-shell.io/aas/2/0")]
@@ -154,8 +150,10 @@ namespace AasModel
 		public SemanticId SemanticId { get; set; }
 		[XmlElement(ElementName = "qualifier", Namespace = "http://www.admin-shell.io/aas/2/0")]
 		public string Qualifier { get; set; }
-		[XmlElement(ElementName = "submodelElements", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public SubmodelElements SubmodelElements { get; set; }
+
+		[XmlArray("submodelElements", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("submodelElement", typeof(SubmodelElement), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<SubmodelElement> SubmodelElements { get; set; }
 	}
 
 	[XmlRoot(ElementName = "property", Namespace = "http://www.admin-shell.io/aas/2/0")]
@@ -175,24 +173,131 @@ namespace AasModel
 		public string Category { get; set; }
 	}
 
+
+	[XmlRoot(ElementName = "entity", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class Entity
+	{
+		[XmlElement(ElementName = "idShort", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string IdShort { get; set; }
+		[XmlElement(ElementName = "category", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Category { get; set; }
+		[XmlElement(ElementName = "description", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public Description Description { get; set; }
+		[XmlElement(ElementName = "kind", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Kind { get; set; }
+		[XmlElement(ElementName = "semanticId", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public SemanticId SemanticId { get; set; }
+		[XmlElement(ElementName = "qualifier", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Qualifier { get; set; }
+		[XmlElement(ElementName = "embeddedDataSpecification", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public EmbeddedDataSpecification EmbeddedDataSpecification { get; set; }
+		[XmlElement(ElementName = "statements", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Statements { get; set; }
+		[XmlElement(ElementName = "entityType", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string EntityType { get; set; }
+		[XmlElement(ElementName = "assetRef", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public AssetRef AssetRef { get; set; }
+	}
+
 	[XmlRoot(ElementName = "submodelElement", Namespace = "http://www.admin-shell.io/aas/2/0")]
 	public class SubmodelElement
 	{
-		[XmlElement(ElementName = "property", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public Property Property { get; set; }
+		[XmlElement(ElementName = "entity", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public Entity Entity { get; set; }
+
+		[XmlElement(ElementName = "relationshipElement", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public RelationshipElement RelationshipElement { get; set; }
+
+		[XmlElement(ElementName = "submodelElementCollection", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public SubmodelElementCollection SubmodelElementCollection { get; set; }
+
 	}
 
-	[XmlRoot(ElementName = "submodelElements", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class SubmodelElements
+	[XmlRoot(ElementName = "first", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class First
+	{
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
+	}
+
+	[XmlRoot(ElementName = "second", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class Second
+	{
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
+	}
+
+	[XmlRoot(ElementName = "relationshipElement", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class RelationshipElement
+	{
+		[XmlElement(ElementName = "idShort", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string IdShort { get; set; }
+		[XmlElement(ElementName = "kind", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Kind { get; set; }
+		[XmlElement(ElementName = "semanticId", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public SemanticId SemanticId { get; set; }
+		[XmlElement(ElementName = "first", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public First First { get; set; }
+		[XmlElement(ElementName = "second", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public Second Second { get; set; }
+		[XmlElement(ElementName = "category", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Category { get; set; }
+	}
+
+	[XmlRoot(ElementName = "value", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class Value
 	{
 		[XmlElement(ElementName = "submodelElement", Namespace = "http://www.admin-shell.io/aas/2/0")]
 		public List<SubmodelElement> SubmodelElement { get; set; }
 	}
 
-	[XmlRoot(ElementName = "submodels", Namespace = "http://www.admin-shell.io/aas/2/0")]
-	public class Submodels
+	[XmlRoot(ElementName = "submodelElementCollection", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class SubmodelElementCollection
 	{
-		[XmlElement(ElementName = "submodel", Namespace = "http://www.admin-shell.io/aas/2/0")]
-		public List<Submodel> Elements { get; set; }
+		[XmlElement(ElementName = "idShort", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string IdShort { get; set; }
+		[XmlElement(ElementName = "kind", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Kind { get; set; }
+		[XmlElement(ElementName = "semanticId", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public SemanticId SemanticId { get; set; }
+		[XmlElement(ElementName = "value", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public Value Value { get; set; }
+		[XmlElement(ElementName = "ordered", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string Ordered { get; set; }
+		[XmlElement(ElementName = "allowDuplicates", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public string AllowDuplicates { get; set; }
+	}
+
+	[XmlRoot(ElementName = "langString", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class LangString
+	{
+		[XmlAttribute(AttributeName = "lang")]
+		public string Lang { get; set; }
+		[XmlText]
+		public string Text { get; set; }
+	}
+
+	[XmlRoot(ElementName = "description", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class Description
+	{
+		[XmlElement(ElementName = "langString", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public LangString LangString { get; set; }
+	}
+
+	[XmlRoot(ElementName = "dataSpecification", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class DataSpecification
+	{
+		[XmlArray("keys", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		[XmlArrayItem("key", typeof(Key), Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public List<Key> Keys { get; set; }
+	}
+
+	[XmlRoot(ElementName = "embeddedDataSpecification", Namespace = "http://www.admin-shell.io/aas/2/0")]
+	public class EmbeddedDataSpecification
+	{
+		[XmlElement(ElementName = "dataSpecification", Namespace = "http://www.admin-shell.io/aas/2/0")]
+		public DataSpecification DataSpecification { get; set; }
 	}
 }
