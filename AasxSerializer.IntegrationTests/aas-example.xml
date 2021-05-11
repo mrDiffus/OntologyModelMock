@@ -17,6 +17,7 @@
           </aas:keys>
         </aas:submodelRef>
       </aas:submodelRefs>
+      <aas:conceptDictionaries />
     </aas:assetAdministrationShell>
   </aas:assetAdministrationShells>
   <aas:assets>
@@ -33,9 +34,7 @@
         </aas:keys>
       </aas:assetIdentificationModelRef>
       <aas:billOfMaterialRef>
-        <aas:keys>
-          <aas:key type="" local="false" idType="" />
-        </aas:keys>
+        <aas:keys />
       </aas:billOfMaterialRef>
       <aas:kind>Instance</aas:kind>
     </aas:asset>
@@ -51,6 +50,7 @@
           <aas:key type="GlobalReference" local="false" idType="IRDI">superUniqueImfSubmodelId</aas:key>
         </aas:keys>
       </aas:semanticId>
+      <aas:qualifier />
       <aas:submodelElements>
         <aas:submodelElement>
           <aas:submodelElementCollection>
@@ -59,6 +59,7 @@
             <aas:semanticId>
               <aas:keys />
             </aas:semanticId>
+            <aas:qualifier />
             <aas:value>
               <aas:submodelElement>
                 <aas:entity>
@@ -102,6 +103,7 @@
                       <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:qualifier />
                   <aas:statements />
                   <aas:entityType>CoManagedEntity</aas:entityType>
                   <aas:assetRef>
@@ -123,11 +125,84 @@
                       <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:qualifier />
                   <aas:statements />
                   <aas:entityType>CoManagedEntity</aas:entityType>
                   <aas:assetRef>
                     <aas:keys>
                       <aas:key type="GlobalReference" local="false" idType="IRI">http://data.aibel.com/project/007990/A-20PA001A-M01</aas:key>
+                    </aas:keys>
+                  </aas:assetRef>
+                </aas:entity>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:entity>
+                  <aas:idShort>AspectObject4</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:statements />
+                  <aas:entityType>CoManagedEntity</aas:entityType>
+                  <aas:assetRef>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">http://data.aibel.com/project/007990/A-20PZ001B</aas:key>
+                    </aas:keys>
+                  </aas:assetRef>
+                </aas:entity>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:entity>
+                  <aas:idShort>AspectObject5</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:statements />
+                  <aas:entityType>CoManagedEntity</aas:entityType>
+                  <aas:assetRef>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">http://data.aibel.com/project/007990/A-20PA001B</aas:key>
+                    </aas:keys>
+                  </aas:assetRef>
+                </aas:entity>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:entity>
+                  <aas:idShort>AspectObject6</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:statements />
+                  <aas:entityType>CoManagedEntity</aas:entityType>
+                  <aas:assetRef>
+                    <aas:keys>
+                      <aas:key type="Asset" local="false" idType="IRI">http://data.aibel.com/project/007990/A-20PA001B-M01</aas:key>
+                    </aas:keys>
+                  </aas:assetRef>
+                </aas:entity>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:entity>
+                  <aas:idShort>AspectObject7</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">SuperUniqueIdForAspectObject</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:statements />
+                  <aas:entityType>CoManagedEntity</aas:entityType>
+                  <aas:assetRef>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">http://data.aibel.com/project/007990/A-20VA001</aas:key>
                     </aas:keys>
                   </aas:assetRef>
                 </aas:entity>
@@ -141,16 +216,17 @@
                       <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:qualifier />
                   <aas:first>
                     <aas:keys>
-                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="Submodel" local="false" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
                       <aas:key type="SubmodelElementCollection" local="true" idType="IdShort" />
                       <aas:key type="Entity" local="true" idType="IdShort">AspectObject1</aas:key>
                     </aas:keys>
                   </aas:first>
                   <aas:second>
                     <aas:keys>
-                      <aas:key type="Asset" local="true" idType="IRI">http://equinor.com/KRA/MainProcessingSystem</aas:key>
+                      <aas:key type="Asset" local="false" idType="IRI">http://equinor.com/KRA/MainProcessingSystem</aas:key>
                     </aas:keys>
                   </aas:second>
                 </aas:relationshipElement>
@@ -164,16 +240,17 @@
                       <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:qualifier />
                   <aas:first>
                     <aas:keys>
-                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="Submodel" local="false" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
                       <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
                       <aas:key type="Entity" local="true" idType="IdShort">AspectObject2</aas:key>
                     </aas:keys>
                   </aas:first>
                   <aas:second>
                     <aas:keys>
-                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="Submodel" local="false" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
                       <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
                       <aas:key type="Entity" local="true" idType="IdShort">AspectObject1</aas:key>
                     </aas:keys>
@@ -190,18 +267,115 @@
                       <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:qualifier />
                   <aas:first>
                     <aas:keys>
-                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="Submodel" local="false" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
                       <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
                       <aas:key type="Entity" local="true" idType="IdShort">AspectObject3</aas:key>
                     </aas:keys>
                   </aas:first>
                   <aas:second>
                     <aas:keys>
-                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="Submodel" local="false" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
                       <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
                       <aas:key type="Entity" local="true" idType="IdShort">AspectObject1</aas:key>
+                    </aas:keys>
+                  </aas:second>
+                </aas:relationshipElement>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:relationshipElement>
+                  <aas:idShort>hasParent_4_0</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:first>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject4</aas:key>
+                    </aas:keys>
+                  </aas:first>
+                  <aas:second>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">http://equinor.com/KRA/MainProcessingSystem</aas:key>
+                    </aas:keys>
+                  </aas:second>
+                </aas:relationshipElement>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:relationshipElement>
+                  <aas:idShort>hasParent_5_4</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:first>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject5</aas:key>
+                    </aas:keys>
+                  </aas:first>
+                  <aas:second>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject4</aas:key>
+                    </aas:keys>
+                  </aas:second>
+                </aas:relationshipElement>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:relationshipElement>
+                  <aas:idShort>hasParent_6_4</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:first>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject6</aas:key>
+                    </aas:keys>
+                  </aas:first>
+                  <aas:second>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject4</aas:key>
+                    </aas:keys>
+                  </aas:second>
+                </aas:relationshipElement>
+              </aas:submodelElement>
+              <aas:submodelElement>
+                <aas:relationshipElement>
+                  <aas:idShort>hasParent_7_0</aas:idShort>
+                  <aas:kind>Instance</aas:kind>
+                  <aas:semanticId>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">superUniqueHasParentSemantics</aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:first>
+                    <aas:keys>
+                      <aas:key type="Submodel" local="true" idType="IRI">www.example.com/ids/sm/4502_0140_5012_3161</aas:key>
+                      <aas:key type="SubmodelElementCollection" local="true" idType="IdShort">IMFSubmodellCollection</aas:key>
+                      <aas:key type="Entity" local="true" idType="IdShort">AspectObject7</aas:key>
+                    </aas:keys>
+                  </aas:first>
+                  <aas:second>
+                    <aas:keys>
+                      <aas:key type="GlobalReference" local="false" idType="IRI">http://equinor.com/KRA/MainProcessingSystem</aas:key>
                     </aas:keys>
                   </aas:second>
                 </aas:relationshipElement>
